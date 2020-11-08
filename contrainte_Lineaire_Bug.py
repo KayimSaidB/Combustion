@@ -138,3 +138,19 @@ for i in (0,19):
 
 #Sensibilité
 #print(f"sensibilite: {ctrs['mincharbon',0].pi}, {ctrs['mincharbon',0].slack}, {mass['charbon',0].rc}")
+m3.optimize()
+s=0
+dico=dict()
+
+for v in m3.getVars():
+    s=s+v.x
+for v in m3.getVars():
+    print(str(v.varName))
+    print(str(v.varName))
+
+    print(v.x)
+   # dico[v.varName]=v.x/s*100
+
+
+plt.bar(list(dico.keys()),dico.values(), color='g')
+plt.show()
